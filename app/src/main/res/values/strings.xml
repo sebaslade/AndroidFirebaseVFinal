@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">android-firebase</string>
+    <string name="title_activity_screen">Screen</string>
+    <string name="title_activity_navigation">Navigation</string>
+    <string name="title_activity_home">Home</string>
+    <string name="title_activity_login">Login</string>
+    <string name="title_activity_sing_up_screen">SingUpScreen</string>
+    <string name="title_activity_forgot_password_screen">ForgotPasswordScreen</string>
+    <string name="title_activity_home_screen">HomeScreen</string>
+    <string name="title_activity_contacts_screen">ContactsScreen</string>
+    <string name="title_activity_notes_screen">NotesScreen</string>
+    <string name="default_web_client_id" translatable="false">699909769815-sg5nemjtn0ss68g6ihoumj2gt16od2j0.apps.googleusercontent.com</string>
+    <string name="title_activity_cloud_storge_screen">CloudStorgeScreen</string>
+    <string name="title_activity_cloud_storage_manager">CloudStorageManager</string>
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+</resources>

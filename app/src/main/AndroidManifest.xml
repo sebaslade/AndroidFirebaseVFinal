@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+
+    <application
+        android:name=".FirebaseApp"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/firebase_logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Androidfirebase"
+        tools:targetApi="31">
+        <activity
+            android:name=".utils.CloudStorageManager"
+            android:exported="false"
+            android:label="@string/title_activity_cloud_storage_manager"
+            android:theme="@style/Theme.Androidfirebase" />
+        <activity
+            android:name=".screens.storage.CloudStorgeScreen"
+            android:exported="false"
+            android:label="@string/title_activity_cloud_storge_screen"
+            android:theme="@style/Theme.Androidfirebase" />
+        <activity
+            android:name=".screens.db.NotesScreen"
+            android:exported="false"
+            android:label="@string/title_activity_notes_screen"
+            android:theme="@style/Theme.Androidfirebase" />
+        <activity
+            android:name=".screens.db.ContactsScreen"
+            android:exported="false"
+            android:label="@string/title_activity_contacts_screen"
+            android:theme="@style/Theme.Androidfirebase" />
+        <activity
+            android:name=".ui.HomeScreen"
+            android:exported="false"
+            android:label="@string/title_activity_home_screen"
+            android:theme="@style/Theme.Androidfirebase" />
+        <activity
+            android:name=".screens.auth.ForgotPasswordScreen"
+            android:exported="false"
+            android:label="@string/title_activity_forgot_password_screen"
+            android:theme="@style/Theme.Androidfirebase" />
+        <activity
+            android:name=".screens.auth.SingUpScreen"
+            android:exported="false"
+            android:label="@string/title_activity_sing_up_screen"
+            android:theme="@style/Theme.Androidfirebase" />
+        <activity
+            android:name=".screens.db.Login"
+            android:exported="false"
+            android:label="@string/title_activity_login"
+            android:theme="@style/Theme.Androidfirebase" />
+        <activity
+            android:name=".screens.home.Home"
+            android:exported="false"
+            android:label="@string/title_activity_home"
+            android:theme="@style/Theme.Androidfirebase" />
+        <activity
+            android:name=".navigation.Navigation"
+            android:exported="false"
+            android:label="@string/title_activity_navigation"
+            android:theme="@style/Theme.Androidfirebase" />
+        <activity
+            android:name=".screens.Screen"
+            android:exported="false"
+            android:label="@string/title_activity_screen"
+            android:theme="@style/Theme.Androidfirebase" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Androidfirebase">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.sebastianlaos.android_firebase.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+        <service
+            android:name=".MyFirebaseService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_google" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/notif_color" />
+    </application>
+
+</manifest>
